@@ -14,8 +14,8 @@ int main()
 
     for(i=1,j=1;i<=n;i++)
     {
-        if(i%A[i]!=0)
-        {
+        if((A[i]%i)!=0)
+        {    printf("%d ",i);
             cubefree[j]=i;
             j++;
         }
@@ -27,5 +27,6 @@ int main()
             printf("%d,",cubefree[i]);
 
     }
+
 
 }
