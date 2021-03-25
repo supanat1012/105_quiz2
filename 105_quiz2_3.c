@@ -2,23 +2,38 @@
 #include<string.h>
 int main()
 {
-    int a,n,i,j,A[100]={1,2,3,4,5,6,7,8,9},B[100],x1,x2,x3;
+    int a,n,i,j,count=0,B[10000];
 
     scanf("%d",&n);
 
-    x1=n%10;
-    n=n/10;
-    x2=n%10;
-    n=n/10;
-    x3=n;
+    for(i=1;i<=n;i++)
+        {
 
-    printf("%d,%d,%d",x1,x2,x3);
+            if(i<9)
+            {
+                B[i]=i;
+            }
+            else if(i<100)
+            {
+                B[i]=i*11;
+            }
+
+        }
+
+   for(i=1;i<=100;i++)
+        printf("%d,",B[i]);
 
 
-    x1=x1*100;
-    x2=x2*10;
 
-     a=x1+x2+x3;
-    printf("\n%d",a);
 
+
+
+
+
+
+
+
+
+
+    printf("%d",count);
 }
