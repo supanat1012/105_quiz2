@@ -12,15 +12,17 @@ int main()
         //printf("%d,",A[i]);
     }
 
-    for(i=1,j=1;i<=100;i++)
+    for(i=1,j=1;i<=100;)
     {
-        if(A[i]%i==0)
+        if(A[i]%j==0)
           {
               cubefree[j]=i;
               printf("%d,",cubefree[j]);
               j++;
-
           }
+        else
+        i++;
+
     }
 
 
