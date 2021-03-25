@@ -6,33 +6,26 @@ int main()
 
     scanf("%d",&n);
 
-    for(i=1;i<=100;i++)
+    for(i=2;i<=100;i++)
     {
-        A[i]=i*i*i;
+        A[i-1]=i*i*i;
         //printf("%d,",A[i]);
     }
 
-    for(i=1,j=1;i<=100;)
+    for(i=1,j=1;i<=n;i++)
     {
-        if(A[i]%j==0)
-          {
-              cubefree[j]=i;
-              printf("%d,",cubefree[j]);
-              j++;
-          }
-        else
-        i++;
-
+        if(i%A[i]!=0)
+        {
+            cubefree[j]=i;
+            j++;
+        }
     }
 
-
-   /* for(i=1;i<=n;i++)
+    for(i=1;i<=n;i++)
     {
-        if(n==result[i])
-        {
-            printf("%d",i);
-        }
 
-    }*/
+            printf("%d,",cubefree[i]);
+
+    }
 
 }
